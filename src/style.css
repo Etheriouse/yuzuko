@@ -1,0 +1,210 @@
+body {
+    background: linear-gradient(to right, purple, orange);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow: hidden;
+}
+
+aside {
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    border: solid 5px black;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.mp {
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+    border: solid 5px black;
+    border-radius: 10px;
+}
+
+main {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+header {
+    border: solid 5px black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.general {
+    border: solid 5px black;
+    border-radius: 10px;
+    margin: auto;
+    width: 40%;
+    padding: 2%;
+}
+
+.message {
+    border: solid 5px black;
+    border-radius: 10px;
+    margin: auto;
+    width: 40%;
+    padding: 2%;
+}
+
+
+.tchatinfo {
+    border: solid 5px black;
+    width: auto;
+    height: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.insidetchatinfo {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.inscrip {
+    width: auto;
+    height: auto;
+}
+
+.tchat {
+    display: flex;
+    flex-direction: column;
+    border: solid 5px black;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.showtchat::-webkit-scrollbar {
+    display: none;
+} 
+
+.showtchat {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid black 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: auto;
+}
+
+.msg1 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid black 5px;
+    background-color: red;
+}
+
+.pdp {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+.namepdptime {
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 100%;
+}
+
+.pseudotime {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.pseudo {
+    font-size:x-large;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 5%;
+}
+
+.time {
+    font-size: large;
+    font-family: sans-serif;
+    font-weight: 100;
+    padding-left: 2%;
+    font-style: italic;
+    width: 100%;
+}
+
+.contents {
+    font-size: large;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding-left: 6%;
+}
+
+.inputtextdiv {
+    display: flex;
+    flex-direction: row;
+    height: 7%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid black 5px;
+
+}
+
+#inputtxt {
+    border: solid black 3px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5px;
+    width: 100%;
+    background: transparent;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+}
+
+.imgfile {
+    width: 40;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#inputfile {
+    display: none;
+}
+
+.info {
+    border: solid 5px black;
+    height: 100%;
+    width: 25%;
+    margin-left: 15px;
+    border-radius: 10px;
+
+}
