@@ -1,210 +1,197 @@
+html {
+    margin: 0;
+    height: 100%;
+}
+
 body {
-    background: linear-gradient(to right, purple, orange);
+    margin: 0;
+    height: 100%;
     display: flex;
     flex-direction: row;
-    height: 100%;
+    /* border: solid black 2px; */
+    background-color: #333332;
     overflow: hidden;
+    resize: both;
 }
 
 aside {
+    
+    border: solid black 2px;
     border-radius: 10px;
-    padding: 5px;
-    margin: 10px;
-    border: solid 5px black;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+    width: 20%;
 }
 
-.content::-webkit-scrollbar {
+.searchoradd {
+    border: solid black 2px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 2px;
+    resize: both;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: purple;
+}
+
+
+#soa {
+    padding: 7px;
+    border: solid black 2px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: purple;
+
+}
+
+#addorsearchimg {
+    max-width: 40px;
+}
+
+
+.contentAside::-webkit-scrollbar {
     display: none;
 }
 
-.content {
-    display: grid;
-    grid-template-columns: auto;
-    height: 100%;
+.contentAside {
     overflow-y: scroll;
-}
-
-.mp {
-    margin: 5px;
-    height: 50px;
-    width: 50px;
-    border: solid 5px black;
-    border-radius: 10px;
-}
-
-main {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-}
-
-header {
-    border: solid 5px black;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    width: auto;
 }
 
 nav {
     display: flex;
     flex-direction: row;
+    /* border: solid blue 2px; */
+    
+    height: 60px;
 }
 
-.general {
-    border: solid 5px black;
-    border-radius: 10px;
-    margin: auto;
-    width: 40%;
-    padding: 2%;
-}
-
-.message {
-    border: solid 5px black;
-    border-radius: 10px;
-    margin: auto;
-    width: 40%;
-    padding: 2%;
-}
-
-
-.tchatinfo {
-    border: solid 5px black;
-    width: auto;
-    height: 78%;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-.insidetchatinfo {
+.threadname {
+    width: 100%;
+    border: solid black 2px;
+    border-radius: 5px;
+    margin-right: 3px;
+    padding: 10px;
     display: flex;
-    flex-direction: row;
-    height: 100%;
+    align-items: center;
+    resize: both;
+    background-color: purple;
 }
 
-.inscrip {
-    width: auto;
-    height: auto;
+.profil {
+    display: flex;
+    flex-direction: row-reverse;
+    border: solid black 2px;
+    width: 20%;
+    border-radius: 5px;
+    margin-left: 2px;
+    background-color: purple;
 }
 
-.tchat {
+.namep {
+    display: flex;
+    align-items: center;
+}
+
+.pdprofil {
+    
+    margin: 2px;
+    border-radius: 20%;
+    border: solid black 2px;
+    
+}
+
+.threadx {
+    margin: 10px;
+    background-color: purple;
+    border-radius: 5px;
+}
+
+.linktoThread {
+    padding: 2px;
+    color:black;
+    text-decoration: none; 
+}
+
+
+main {
+    /* border: solid purple 2px; */
+    margin: 5px;
     display: flex;
     flex-direction: column;
-    border: solid 5px black;
-    height: 100%;
+    
+    resize: both;
+    margin: 15px;
     width: 100%;
-    margin: auto;
-    border-radius: 10px;
 }
 
-.showtchat::-webkit-scrollbar {
+.spacetalk::-webkit-scrollbar {
     display: none;
-} 
+}
 
-.showtchat {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: solid black 5px;
-    height: 100%;
+.spacetalk {
+    /* border: solid Yellow 2px; */
     display: flex;
     flex-direction: column-reverse;
-    overflow: auto;
+    height: 100%;
+    overflow-y: scroll;
 }
 
-.msg1 {
-    display: flex;
-    flex-direction: column;
+.messagex {
     margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: solid black 5px;
-    background-color: red;
+}
+
+.headermsg {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    padding-top: 5px;
 }
 
 .pdp {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 50%;
-}
-
-.namepdptime {
-    display: flex;
-    flex-direction: row;
-    height: 70px;
-    width: 100%;
-}
-
-.pseudotime {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+    margin-top: 2px;
+    max-height: 50px;
+    border-radius: 20%;
+    border: solid black 2px;
 }
 
 .pseudo {
-    font-size:x-large;
-    font-family: sans-serif;
-    font-weight: 600;
-    padding-left: 5%;
+    padding-left: 5px;
 }
 
-.time {
-    font-size: large;
-    font-family: sans-serif;
-    font-weight: 100;
-    padding-left: 2%;
-    font-style: italic;
-    width: 100%;
+.contentmsg {
+    /* border: solid gray, 5px; */
+    margin-left: 10px;
 }
 
-.contents {
-    font-size: large;
-    font-family: sans-serif;
-    font-weight: 500;
-    padding-left: 6%;
-}
-
-.inputtextdiv {
+.enterContent {
+    /* border: solid green 2px; */
+    height: auto;
     display: flex;
-    flex-direction: row;
-    height: 7%;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: solid black 5px;
-
 }
 
-#inputtxt {
-    border: solid black 3px;
-    border-radius: 5px;
+.barEnter {
     padding: 10px;
-    margin-right: 5px;
     width: 100%;
-    background: transparent;
-    font-size: large;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 800;
 }
 
-.imgfile {
-    width: 40;
-    margin: auto;
-    border-radius: 10px;
+.entrertext {
+  padding: 2px;
+  border-radius: 5px;
+  border: solid black 2px;
+  width: 100%;
+  height: 30px;
+  font-size: large;
+  background-color: purple;
 }
 
-#inputfile {
-    display: none;
-}
-
-.info {
-    border: solid 5px black;
-    height: 100%;
-    width: 25%;
-    margin-left: 15px;
-    border-radius: 10px;
-
+.buttonenter {
+    width: auto;
+    width: 50px;    
+    margin: 10px;
 }

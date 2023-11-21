@@ -1,0 +1,29 @@
+{
+    "user": {
+        "pseudo": "$name",
+        "email": "$mail",
+        "password": "$pwd",
+        "profilpicture": "$pp",
+        "genre": "$g",
+        "birthdate": "$bd",
+        "id": "$id",
+        "ArrayMessages": ["$Messages[]"],
+        "ArrayThreadTalk": ["$Threads[]"]
+    },
+
+    "Message": {
+        "author": "$user",
+        "content": "string",
+        "time": 2023,
+        "thread": "path/thread"
+    },
+
+    "Thread": {
+        "name": "$Tname",
+        "description": "$Tdescrp",
+        "DayMessage": "$TdayMsg",
+        "TotalMessage": "$TAllMsg",
+        "ArrayMessages": ["$TMessages[]"],
+        "ArrayUserTalk": ["$Tusers[]"]
+    }
+}
