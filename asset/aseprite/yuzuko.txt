@@ -1,3 +1,0 @@
-a gauche la liste des thread dans l'ordre qui a le plus de message envoyer par jours reset tout les jours
-a droite on a le tchaht
-en haut on a la nav bar avec l'icone profil pour le modifier
