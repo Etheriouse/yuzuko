@@ -35,7 +35,7 @@ if(isset($loginCorrect) && $loginCorrect): ?>
       <header>
         <nav>
           <div class="threadname">
-            <h3>Thread Name</h3>
+            <h3><?php echo $actualThread['name'] ?></h3>
           </div>
           <div class="profil">
             <img

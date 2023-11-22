@@ -6,9 +6,10 @@ To make:
 - make add user function
 - make delete user function
 - Make BBD
+- Make the system of search
+- Make the system of placement by number of message
 
 To Setup:
 
 - Setup System for add message when send it
 - Setup System for add thread when create it
-
