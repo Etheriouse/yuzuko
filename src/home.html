@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuzuko</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../asset/iconYuzuko.png" />
+  </head>
+
+  <body>
+    <aside id="asi">
+      <div class="searchoradd">
+        <img
+          onclick="addthread()"
+          id="addorsearchimg"
+          src="../asset/search.png"
+        />
+        <input
+          maxlength="17"
+          id="soa"
+          type="text"
+          placeholder="Search or add"
+        />
+        <img
+          onclick="dminu()"
+          src="../asset/login.png"
+          class="hide"
+          id="hides"
+        />
+      </div>
+
+      <script>
+        let dim = true;
+        function dminu() {
+          let phone = window.innerWidth < 420;
+          if (!dim) {
+            let aside = document.getElementById("asi");
+            let inputext = document.getElementById("soa");
+            let search = document.getElementById("addorsearchimg");
+            let title = document.getElementById("textthread");
+            aside.style.width = "75px";
+            inputext.style.display = "none";
+            search.style.display = "none";
+            title.style.display = "none";
+            if (phone) {
+            }
+            dim = !dim;
+          } else {
+            let aside = document.getElementById("asi");
+            let inputext = document.getElementById("soa");
+            let search = document.getElementById("addorsearchimg");
+            let title = document.getElementById("textthread");
+            if (phone) {
+              aside.style.width = "90%";
+            } else {
+              aside.style.width = "20%";
+            }
+            inputext.style.display = "block";
+            search.style.display = "block";
+            title.style.display = "block";
+            dim = !dim;
+          }
+        }
+      </script>
+
+      <div id="contentAside" class="contentAside">
+        <div id="threadx" class="threadx">
+          <a class="linktoThread" href="#">
+            <img src="../asset/iconYuzuko.png" class="iconthread" />
+            <h3 id="textthread">Général</h3>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <header>
+        <script>
+          document.addEventListener("click", function (element) {
+            var good = false;
+            let menu = document.getElementsByClassName("linkToPage");
+            for (let i = 0; i < menu.length; i += 1) {
+              if (menu[i] == element.target) {
+                good = true;
+              }
+            }
+            if (
+              element.target == document.getElementById("pdpprofil") ||
+              good
+            ) {
+              document.getElementById("items").style.transform = "scaleY(1)";
+            } else {
+              document.getElementById("items").style.transform = "scaleY(0)";
+            }
+          });
+        </script>
+
+        <nav>
+          <div class="threadname">
+            <h3>Thread Name</h3>
+          </div>
+          <div class="profil" id="profildive">
+            <div class="menu">
+              <img
+                id="pdpprofil"
+                class="pdprofil"
+                src="../asset/Yuzu_thinks.png"
+              />
+              <div class="items" id="items">
+                <a href="profilsetting.html" class="linkToPage">
+                  <img src="../asset/Setting.png" class="settings" />
+                  Settings
+                </a>
+                <a href="#" class="linkToPage">
+                  <img src="../asset/Profile.png" class="profilsetting" />
+                  Profil
+                </a>
+                <a href="#" class="linkToPage">
+                  <img src="../asset/ExtractData.png" class="data" />
+                  Extract data
+                </a>
+                <a href="#" class="linkToPage">
+                  <img src="../asset/logout.png" class="logout" />
+                  Logout
+                </a>
+              </div>
+            </div>
+
+            <h3 class="namep">Pseudo</h3>
+          </div>
+        </nav>
+      </header>
+
+      <div id="spacetalk" class="spacetalk">
+        <!-- <div id="messagex" class="messagex">
+        <div class="headermsg">
+          <img class="pdp" src="../asset/Yuzu_thinks.png" />
+          <h4 class="pseudo">Pseudo <span>time</span></h4>
+        </div>
+        <p class="contentmsg">Contenu du message</p>
+      </div> -->
+      </div>
+
+      <div class="enterContent">
+        <div class="barEnter">
+          <input
+            id="entrertext"
+            class="entrertext"
+            type="text"
+            placeholder="Enter texte"
+          />
+        </div>
+        <img
+          onclick="callPhp('name=helloworld?value=bonjourlemonde')"
+          class="buttonenter"
+          src="../asset/addfile.png"
+        />
+      </div>
+    </main>
+
+    <script type="text/javascript">
+      let inp = document.getElementById("entrertext");
+
+      inp.addEventListener("keyup", (e) => {
+        if (e.key == "Enter") {
+          //alert("you pressed enter key");
+          let val = inp.value;
+          console.log(val);
+          inp.value = "";
+          if (val != "") {
+            addMsg(val);
+          }
+        }
+      });
+
+      function addMsg(messageContent) {
+        let now = new Date();
+        let timeSetNow =
+          now.getFullYear() +
+          "/" +
+          now.getMonth() +
+          "/" +
+          now.getDay() +
+          " " +
+          now.getHours() +
+          ":" +
+          now.getMinutes() +
+          ":" +
+          now.getSeconds();
+
+        let messagex = document.createElement("div");
+        let headermsg = document.createElement("div");
+        let pdp = document.createElement("img");
+        let pseudo = document.createElement("h4");
+        let contentmsg = document.createElement("p");
+
+        let tpseudo = document.createTextNode(`Bob le bricoleur ${timeSetNow}`);
+
+        let msg = document.createTextNode(messageContent);
+
+        messagex.classList.add("messagex");
+        messagex.setAttribute("id", "messagex");
+        headermsg.classList.add("headermsg");
+        pdp.classList.add("pdp");
+        pseudo.classList.add("pseudo");
+        pdp.src = `../asset/Yuzu_thinks.png`;
+        pseudo.classList.add("pseudo");
+        contentmsg.classList.add("contentmsg");
+
+        pseudo.appendChild(tpseudo);
+        contentmsg.appendChild(msg);
+        headermsg.appendChild(pdp);
+        headermsg.appendChild(pseudo);
+        messagex.appendChild(headermsg);
+        messagex.appendChild(contentmsg);
+
+        let parentDiv = document.getElementById("spacetalk");
+        let chidldiv = document.getElementById("messagex");
+
+        parentDiv.insertBefore(messagex, chidldiv);
+      }
+    </script>
+  </body>
+</html>

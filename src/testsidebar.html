@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside id="asi">
+        <div class="searchoradd">
+          <img
+            onclick="addthread()"
+            id="addorsearchimg"
+            src="../asset/search.png"
+          />
+          <input
+            maxlength="17"
+            id="soa"
+            type="text"
+            placeholder="Search or add"
+          />
+          <img
+          onclick="dminu()"
+          src="../asset/login.png"
+          class="hide"
+          id="hides"
+          />
+        </div>
+
+        <script>
+          let dim = false;
+          function dminu() {
+              if(!dim) {
+                  let aside = document.getElementById("asi")
+                  let inputext = document.getElementById("soa");
+                  let search = document.getElementById("addorsearchimg")
+                  let title = document.getElementById("textthread");
+                  aside.style.width="75px"
+                  inputext.style.display="none";
+                  search.style.display="none";
+                  title.style.display="none";
+                  dim = !dim;
+              } else {
+                  let aside = document.getElementById("asi")
+                  let inputext = document.getElementById("soa");
+                  let search = document.getElementById("addorsearchimg")
+                  let title = document.getElementById("textthread");
+                  aside.style.width="20%";
+                  inputext.style.display="block";
+                  search.style.display="block";
+                  title.style.display="block";
+                  dim = !dim;
+
+              }
+          }
+        </script>
+
+        <div id="contentAside" class="contentAside">
+          <div id="threadx" class="threadx">
+              <a class="linktoThread" href="#">
+                  <img src="../asset/iconYuzuko.png" class="iconthread"/>
+                  <h3 id="textthread">Général</h3>
+              </a>
+          </div>
+
+        </div>
+      </aside>
+  </body>
+</html>

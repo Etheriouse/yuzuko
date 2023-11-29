@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuzuko</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="profilsettings.css" />
+  <link rel="icon" href="../asset/iconYuzuko.png" />
+</head>
+
+<body>
+  <aside id="asi">
+    <div class="searchoradd">
+      <img
+        onclick="addthread()"
+        id="addorsearchimg"
+        src="../asset/search.png"
+      />
+      <input
+        maxlength="17"
+        id="soa"
+        type="text"
+        placeholder="Search or add"
+      />
+      <img
+        onclick="dminu()"
+        src="../asset/login.png"
+        class="hide"
+        id="hides"
+      />
+    </div>
+
+    <script>
+      let dim = true;
+      function dminu() {
+        let phone = window.innerWidth < 420;
+        if (!dim) {
+          let aside = document.getElementById("asi");
+          let inputext = document.getElementById("soa");
+          let search = document.getElementById("addorsearchimg");
+          let title = document.getElementById("textthread");
+          aside.style.width = "75px";
+          inputext.style.display = "none";
+          search.style.display = "none";
+          title.style.display = "none";
+          if (phone) {
+          }
+          dim = !dim;
+        } else {
+          let aside = document.getElementById("asi");
+          let inputext = document.getElementById("soa");
+          let search = document.getElementById("addorsearchimg");
+          let title = document.getElementById("textthread");
+    if (phone) {
+            aside.style.width = "90%";
+          } else {
+            aside.style.width = "20%";
+          }
+          inputext.style.display = "block";
+          search.style.display = "block";
+          title.style.display = "block";
+          dim = !dim;
+        }
+      }
+    </script>
+
+    <div id="contentAside" class="contentAside">
+      <div id="threadx" class="threadx">
+        <a class="linktoThread" href="#">
+          <img src="../asset/iconYuzuko.png" class="iconthread" />
+          <h3 id="textthread">Général</h3>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+
+      <script>
+        document.addEventListener("click", function (element) {
+          var good = false;
+          let menu = document.getElementsByClassName("linkToPage");
+          for (let i = 0; i < menu.length; i += 1) {
+            if (menu[i] == element.target) {
+              good = true;
+            }
+          }
+          if (element.target == document.getElementById("pdpprofil") || good) {
+            document.getElementById("items").style.transform = "scaleY(1)";
+          } else {
+            document.getElementById("items").style.transform = "scaleY(0)";
+          }
+        });
+      </script>
+
+
+      <nav>
+        <div class="threadname">
+          <h3>Thread Name</h3>
+        </div>
+        <div class="profil" id="profildive">
+          <div class="menu">
+            <img
+              id="pdpprofil"
+              class="pdprofil"
+              src="../asset/Yuzu_thinks.png"
+            />
+            <div class="items" id="items">
+              <a href="profilsetting.html" class="linkToPage">
+                <img src="../asset/Setting.png" class="settings" />
+                Settings
+              </a>
+              <a href="#" class="linkToPage">
+                <img src="../asset/Profile.png" class="profilsetting" />
+                Profil
+              </a>
+              <a href="#" class="linkToPage">
+                <img src="../asset/ExtractData.png" class="data" />
+                Extract data
+              </a>
+              <a href="#" class="linkToPage">
+                <img src="../asset/logout.png" class="logout" />
+                Logout
+              </a>
+            </div>
+          </div>
+
+          <h3 class="namep">Pseudo</h3>
+        </div>
+      </nav>
+    </header>
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"> -->
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function ftg(dataGr) {
+          $.ajax({
+            type: "POST",
+            url: "dl.php",
+            data: {
+              file: "fils e pute redpon",
+            },
+            error: function () {
+              alert("Error can create thread of " + name);
+            },
+            success: function () {
+              console.log("succes !");
+            }
+          })
+        };
+      </script>
+
+
+    <div id="spaceSettings" class="spaceSettings">
+      <form action="dl.php" method="post" class="settings" enctype="multipart/form-data">
+        <h2>Settings</h2>
+        <div class="divSettings">
+          <h4>Pseudo:</h4>
+          <input name="name" type="text" placeholder="Pseudo" class="name" />
+        </div>
+        <div class="divSettings">
+          <h4>Username:</h4>
+          <input name="username" type="text", placeholder="Username" class="username"/>
+        </div>
+        <div class="divSettings">
+          <h4>Photo de profils</h4>
+          <input name="pp" id="getFile" type="file" placeholder="Photo de profils" class="pp" />
+        </div>
+        <div class="divSettings">
+          <h4>Genre:</h4>
+          <input name="g"type="text" placeholder="Genre" class="g" />
+        </div>
+        <div class="divSettings">
+          <h4>Date d'anniversaire:</h4>
+          <input name="bd" type="text" placeholder="Anniversaire" class="bd" />
+        </div>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+<!--
+    <div class="div
+
+    ">
+      <h4>Email:</h4>
+      <input name="mail" type="text" placeholder="Email" class="mail" />
+    </div>
+    <div class="divSettings">
+      <h4>Ancien mots de passe:</h4>
+      <input name="pwd" type="password" placeholder="Ancien mots de passe" class="pwd" />
+    </div>
+    <div class="divSettings">
+      <h4>Nouveau mots de passe</h4>
+      <input name="newpwd" type="password" placeholder="Nouveau mots de passe" class="newpwd" />
+    </div>
+    <div class="divSettings">
+      <h4>Confirmer mots de passe</h4>
+      <input name="confpwd" type="password" placeholder="Confirmer mots de passe" class="confirmpwd" multiple />
+    </div> -->
+
+</body>
+
+</html>

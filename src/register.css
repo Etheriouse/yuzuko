@@ -1,0 +1,154 @@
+html {
+    margin: 0;
+    height: 100%;
+    color: white;
+}
+
+
+/*
+4D4D4D
+333332
+950095
+*/
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: solid black 2px; */
+    background-color: #4D4D4D;
+    overflow: hidden;
+    resize: both;
+    align-items: center;
+    margin: 0;
+}
+
+.titml {
+    margin-top: 20px;
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border: solid black 4px;
+}
+
+form {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contant {
+    border: solid black 5px;
+    border-radius: 2px;
+    background-color: #333332;
+    height: auto;
+    width: 50%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contentimg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.splashArt {
+    min-width: auto;
+    min-height: auto;
+    width: 100%;
+}
+
+.inputt {
+    margin: 20px;
+}
+
+button {
+    border: solid black 2px;
+    border-radius: 5px;
+    background-color: #950095;
+    color: white;
+}
+
+button:hover {
+    background-color: purple;
+}
+
+input {
+    border: solid black 3px;
+    background-color: #950095;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 800px) {
+    .onphone {
+        display: none;
+    }
+}
+
+/*Telephone view*/
+
+
+@media only screen and (max-width: 420px) {
+
+    html {
+        overflow-y: scroll;
+    }
+
+    .titml {
+        margin-top: 20px;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: solid black 4px;
+    }
+
+    body {
+        overflow-y: scroll;
+    }
+
+    .contant {
+        width: auto;
+        overflow-y: scroll;
+        height: 60%;
+    }
+
+    .onpc {
+        display: none;
+    }
+
+    .onphone {
+        margin: 10px;
+    }
+
+    form {
+        width: auto;
+        height: auto;
+    }
+
+    button {
+        margin-bottom: 10%;
+    }
+
+    input {
+        max-width: 100px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .splashArt {
+        display: none;
+    }
+
+    .onpc {
+        display: none;
+    }
+
+    .onphone {
+        margin: 10px;
+    }
+
+}

@@ -1,6 +1,7 @@
 html {
     margin: 0;
     height: 100%;
+    color: white;
 }
 
 body {
@@ -15,9 +16,10 @@ body {
 }
 
 aside {
-    
+
     border: solid black 2px;
     border-radius: 10px;
+    background-color: #333332;
 
     display: flex;
     flex-direction: column;
@@ -25,8 +27,10 @@ aside {
     margin-left: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
-    
-    width: 20%;
+
+    transition: 0.5s;
+
+    width: 75px;
 }
 
 .searchoradd {
@@ -37,21 +41,37 @@ aside {
     resize: both;
     display: flex;
     flex-direction: row-reverse;
+    background-color: #950095;
+}
+
+#soa, #addorsearchimg, #textthread {
+    display: none;
+  }
+
+#soa:hover {
     background-color: purple;
 }
 
+#soa:focus {
+    outline: none;
+}
 
 #soa {
     padding: 7px;
     border: solid black 2px;
     border-radius: 10px;
     width: 100%;
-    background-color: purple;
+    background-color: #950095;
 
 }
 
 #addorsearchimg {
     max-width: 40px;
+}
+
+#hides {
+    max-width: 40px;
+    padding: 2px;
 }
 
 
@@ -67,7 +87,7 @@ nav {
     display: flex;
     flex-direction: row;
     /* border: solid blue 2px; */
-    
+
     height: 60px;
 }
 
@@ -80,7 +100,7 @@ nav {
     display: flex;
     align-items: center;
     resize: both;
-    background-color: purple;
+    background-color: #950095;
 }
 
 .profil {
@@ -90,32 +110,86 @@ nav {
     width: 20%;
     border-radius: 5px;
     margin-left: 2px;
-    background-color: purple;
+    background-color: #950095;
+}
+
+.items {
+    margin-top: 5px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    transform: scaleY(0);
+    transition: 0.1s;
+    transform-origin: top;
+    width: 70%;
+    resize: horizontal;
+    border: solid black 2px;
+    background-color: #4D4D4D;
+    border-radius: 5px;
+}
+
+.items>a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content:baseline;
+    align-items: center;
+}
+
+.settings, .profilsetting, .data, .logout {
+    width: 20%;
+    margin: 10px;
 }
 
 .namep {
     display: flex;
     align-items: center;
+    z-index: 3;
+    margin-right: 60px;
 }
 
 .pdprofil {
-    
-    margin: 2px;
+    width: 50px;
     border-radius: 20%;
     border: solid black 2px;
-    
+}
+
+.menu {
+    position: absolute;
+    margin-top: 1px;
+    margin-right: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: end ;
 }
 
 .threadx {
     margin: 10px;
-    background-color: purple;
+    background-color: #950095;
+    border: solid black 3px;
     border-radius: 5px;
+
 }
 
+.threadx:hover {
+    background-color: purple;
+}
+
+
 .linktoThread {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: baseline;
     padding: 2px;
-    color:black;
-    text-decoration: none; 
+    color: white;
+    text-decoration: none;
+}
+
+.iconthread {
+    height: 30px;
+    margin: 7px;
 }
 
 
@@ -124,8 +198,7 @@ main {
     margin: 5px;
     display: flex;
     flex-direction: column;
-    
-    resize: both;
+
     margin: 15px;
     width: 100%;
 }
@@ -161,16 +234,10 @@ main {
 }
 
 .pseudo {
-    letter-spacing: 2px;
-    font-family: Arial, sans-serif;
-    color: white;
     padding-left: 5px;
 }
 
 .contentmsg {
-    font-style: inherit;
-    font-family: Arial, sans-serif;
-    color: white;
     /* border: solid gray, 5px; */
     margin-left: 10px;
 }
@@ -179,6 +246,7 @@ main {
     /* border: solid green 2px; */
     height: auto;
     display: flex;
+    flex-direction: row;
 }
 
 .barEnter {
@@ -193,11 +261,58 @@ main {
   width: 100%;
   height: 30px;
   font-size: large;
-  background-color: purple;
+  background-color: #950095;
 }
 
 .buttonenter {
     width: auto;
-    width: 50px;    
+    width: 50px;
     margin: 10px;
+}
+
+@media only screen and (max-width: 420px) {
+
+    #soa, #addorsearchimg, #textthread {
+        display: none;
+    }
+
+    aside {
+        z-index: 4;
+        width: 75px;
+        position: absolute;
+        height: 100%;
+    }
+
+    .threadname {
+        display: none;
+    }
+
+    nav {
+        justify-content: end;
+        margin-right: 4px;
+        margin-top: 3px;
+    }
+
+    header {
+        width: 70%;
+    }
+
+    .profil {
+        width: 100%;
+    }
+
+    main {
+        align-items: flex-end;
+    }
+
+    .spacetalk {
+        width: 70%;
+        align-items: flex-end;
+    }
+
+    .enterContent {
+        width: 70%;
+        align-items: flex-end;
+    }
+
 }
