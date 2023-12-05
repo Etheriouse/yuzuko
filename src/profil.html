@@ -1,3 +1,10 @@
+<!-- La page de profil contient:
+        - Une bannière
+        - une pdp
+        - une description
+        - des commentaire sur le profil
+        -  -->
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,6 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yuzuko</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="profil.css" />
   <link rel="icon" href="../asset/iconYuzuko.png" />
 </head>
 
@@ -146,7 +154,7 @@
                 <img src="../asset/ExtractData.png" class="data" />
                 Extract data
               </a>
-              <a href="lo" class="linkToPage">
+              <a href="login.html" class="linkToPage">
                 <img src="../asset/logout.png" class="logout" />
                 Logout
               </a>
@@ -159,84 +167,11 @@
     </header>
 
     <div id="spacetalk" class="spacetalk">
-      <!-- <div id="messagex" class="messagex">
-        <div class="headermsg">
-          <img class="pdp" src="../asset/Yuzu_thinks.png" />
-          <h4 class="pseudo">Pseudo <span>time</span></h4>
-        </div>
-        <p class="contentmsg">Contenu du message</p>
-      </div> -->
-    </div>
 
-    <div class="enterContent">
-      <div class="barEnter">
-        <input id="entrertext" class="entrertext" type="text" placeholder="Enter texte" />
-      </div>
-      <img onclick="callPhp('name=helloworld?value=bonjourlemonde')" class="buttonenter" src="../asset/addfile.png" />
+
+
     </div>
   </main>
-
-  <script type="text/javascript">
-    let inp = document.getElementById("entrertext");
-
-    inp.addEventListener("keyup", (e) => {
-      if (e.key == "Enter") {
-        //alert("you pressed enter key");
-        let val = inp.value;
-        console.log(val);
-        inp.value = "";
-        if (val != "") {
-          addMsg(val);
-        }
-      }
-    });
-
-    function addMsg(messageContent) {
-      let now = new Date();
-      let timeSetNow =
-        now.getFullYear() +
-        "/" +
-        now.getMonth() +
-        "/" +
-        now.getDay() +
-        " " +
-        now.getHours() +
-        ":" +
-        now.getMinutes() +
-        ":" +
-        now.getSeconds();
-
-      let messagex = document.createElement("div");
-      let headermsg = document.createElement("div");
-      let pdp = document.createElement("img");
-      let pseudo = document.createElement("h4");
-      let contentmsg = document.createElement("p");
-
-      let tpseudo = document.createTextNode(`Bob le bricoleur ${timeSetNow}`);
-
-      let msg = document.createTextNode(messageContent);
-
-      messagex.classList.add("messagex");
-      headermsg.classList.add("headermsg");
-      pdp.classList.add("pdp");
-      pseudo.classList.add("pseudo");
-      pdp.src = `../asset/Yuzu_thinks.png`;
-      pseudo.classList.add("pseudo");
-      contentmsg.classList.add("contentmsg");
-
-      pseudo.appendChild(tpseudo);
-      contentmsg.appendChild(msg);
-      headermsg.appendChild(pdp);
-      headermsg.appendChild(pseudo);
-      messagex.appendChild(headermsg);
-      messagex.appendChild(contentmsg);
-
-      let parentDiv = document.getElementById("spacetalk");
-      let chidldiv = document.getElementsByClassName("messagex");
-
-      parentDiv.insertBefore(messagex, chidldiv[0]);
-    }
-  </script>
 </body>
 
 </html>
