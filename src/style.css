@@ -10,16 +10,16 @@ body {
     display: flex;
     flex-direction: row;
     /* border: solid black 2px; */
-    background-color: #333332;
+    background-color: #501f3a;
     overflow: hidden;
     resize: both;
 }
 
 aside {
 
-    border: solid black 2px;
+    /* border: solid black 2px; */
     border-radius: 10px;
-    background-color: #333332;
+    background-color: #0f292f;
 
     display: flex;
     flex-direction: column;
@@ -34,22 +34,24 @@ aside {
 }
 
 .searchoradd {
-    border: solid black 2px;
+    /* border: solid black 2px; */
     border-radius: 10px;
     margin: 10px;
     padding: 2px;
     resize: both;
     display: flex;
     flex-direction: row-reverse;
-    background-color: #950095;
+    background-color: #14a098;
 }
 
-#soa, #addorsearchimg, #textthread {
+#soa,
+#addorsearchimg,
+.textthread {
     display: none;
-  }
+}
 
 #soa:hover {
-    background-color: purple;
+    background-color: #13958e;
 }
 
 #soa:focus {
@@ -58,10 +60,10 @@ aside {
 
 #soa {
     padding: 7px;
-    border: solid black 2px;
+    /* border: solid black 2px; */
     border-radius: 10px;
     width: 100%;
-    background-color: #950095;
+    background-color: #14a098;
 
 }
 
@@ -93,24 +95,28 @@ nav {
 
 .threadname {
     width: 100%;
-    border: solid black 2px;
+    /* border: solid black 2px; */
     border-radius: 5px;
     margin-right: 3px;
     padding: 10px;
     display: flex;
     align-items: center;
     resize: both;
-    background-color: #950095;
+    background-color: #0f292f;
 }
 
 .profil {
     display: flex;
     flex-direction: row-reverse;
-    border: solid black 2px;
+    /* border: solid black 2px; */
     width: 20%;
     border-radius: 5px;
     margin-left: 2px;
-    background-color: #950095;
+    background-color: #0f292f;
+}
+
+.items>a:hover {
+    background-color: #13958e;
 }
 
 .items {
@@ -123,8 +129,8 @@ nav {
     transform-origin: top;
     width: 70%;
     resize: horizontal;
-    border: solid black 2px;
-    background-color: #4D4D4D;
+    /* border: solid black 2px; */
+    background-color: #14a098;
     border-radius: 5px;
 }
 
@@ -132,11 +138,14 @@ nav {
     color: white;
     text-decoration: none;
     display: flex;
-    justify-content:baseline;
+    justify-content: baseline;
     align-items: center;
 }
 
-.settings, .profilsetting, .data, .logout {
+.settings,
+.profilsetting,
+.data,
+.logout {
     width: 20%;
     margin: 10px;
 }
@@ -151,7 +160,7 @@ nav {
 .pdprofil {
     width: 50px;
     border-radius: 20%;
-    border: solid black 2px;
+    /* border: solid black 2px; */
 }
 
 .menu {
@@ -161,19 +170,19 @@ nav {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    align-items: end ;
+    align-items: end;
 }
 
 .threadx {
     margin: 10px;
-    background-color: #950095;
-    border: solid black 3px;
+    background-color: #14a098;
+    /* border: solid black 3px; */
     border-radius: 5px;
 
 }
 
 .threadx:hover {
-    background-color: purple;
+    background-color: #13958e;
 }
 
 
@@ -230,7 +239,7 @@ main {
     margin-top: 2px;
     max-height: 50px;
     border-radius: 20%;
-    border: solid black 2px;
+    /* border: solid black 2px; */
 }
 
 .pseudo {
@@ -254,14 +263,20 @@ main {
     width: 100%;
 }
 
+.entrertext:focus {
+    outline: none
+}
+
+
 .entrertext {
-  padding: 2px;
-  border-radius: 5px;
-  border: solid black 2px;
-  width: 100%;
-  height: 30px;
-  font-size: large;
-  background-color: #950095;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    /* border: solid black 2px; */
+    width: 100%;
+    height: 30px;
+    font-size: large;
+    background-color: #0f292f;
 }
 
 .buttonenter {
@@ -272,7 +287,9 @@ main {
 
 @media only screen and (max-width: 420px) {
 
-    #soa, #addorsearchimg, #textthread {
+    #soa,
+    #addorsearchimg,
+    .textthread {
         display: none;
     }
 

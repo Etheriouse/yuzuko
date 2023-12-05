@@ -16,3 +16,8 @@
 h2, h4 {
     color: white;
 }
+
+.spaceSettings {
+    display: flex;
+    flex-direction: row;
+}
